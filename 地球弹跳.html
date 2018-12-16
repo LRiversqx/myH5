@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#imgid{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+	<script src="funs.js"></script>
+</head>
+<body>
+	<img src="img/dq.png" alt="" id="imgid">
+</body>
+<script>
+	var x=0;
+	var y=0;
+	var xv=10;
+	var yv=10;
+	var h=document.documentElement.clientHeight-50;
+	var w=document.documentElement.clientWidth-50;
+    
+	setInterval(function(){
+		 x+=xv;
+		 if(x>w){
+		 	xv=-xv;
+		  }if(x<0){
+		  	xv=-xv;
+		  }
+		 $("imgid").style.left=x+"px";
+		 y+=yv;
+		 if(y>h){
+		 	yv=-yv;
+		  }if(y<0){
+		  	yv=-yv;
+		  }
+		 $("imgid").style.top=y+"px";
+		
+	      
+	},10)
+
+</script>
+</html>
